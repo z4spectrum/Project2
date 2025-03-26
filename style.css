@@ -1,4 +1,8 @@
 /* General Styles */
+*{
+    margin: 0;
+    padding: 0;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -14,7 +18,7 @@ body {
 /* Header */
 header {
     position: relative;
-    background-color: #ff99cc;
+    background-color: #ff3385;
     padding: 10px 5%;
     display: flex;
     align-items: center;
@@ -39,6 +43,11 @@ header img {
     margin: 0;
     padding: 0;
 }
+.bellota-bold-italic {
+    font-family: "Bellota", system-ui;
+    font-weight: 700;
+    font-style: italic;
+  }
 
 .nav-links li {
     display: inline;
@@ -86,7 +95,10 @@ header img {
 
 .hero h1 {
     color: #660033;
-    font-size: 2rem;
+    font-family: "Bellota", system-ui;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 50px;
 }
 
 .btn {
@@ -98,6 +110,8 @@ header img {
     border-radius: 5px;
     font-weight: bold;
     margin-top: 15px;
+    width: 50px;
+    
 }
 
 /* Shop Section */

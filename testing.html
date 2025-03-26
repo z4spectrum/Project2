@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Section with Animation</title>
+  <style>
+    /* Global Reset */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      background: #fbe9e7; /* Light Peach */
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      background: url('https://via.placeholder.com/1200x800') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      padding: 20px;
+    }
+
+    .hero-title {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      opacity: 0;
+      animation: fadeInUp 1.2s ease-in-out forwards;
+    }
+
+    .hero-tagline {
+      font-size: 1.5rem;
+      font-weight: 500;
+      opacity: 0;
+      animation: fadeInUp 1.5s ease-in-out 0.5s forwards;
+    }
+
+    /* Fade-in Up Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Typing Effect */
+    .typing {
+      display: inline-block;
+      border-right: 3px solid #fff;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Ethereal Weaves</h1>
+      <p class="hero-tagline typing"></p> <!-- Typing effect applied here -->
+    </div>
+  </section>
+
+  <script>
+    // Typing Effect for Tagline
+    const tagline = "Handwoven Elegance, Crafted for You.";
+    let i = 0;
+    function typeWriter() {
+      if (i < tagline.length) {
+        document.querySelector(".hero-tagline").textContent += tagline.charAt(i);
+        i++;
+        setTimeout(typeWriter, 80); // Speed of typing effect
+      }
+    }
+    window.onload = () => setTimeout(typeWriter, 1000); // Delay before starting
+  </script>
+
+</body>
+</html>
