@@ -70,32 +70,36 @@ body {
     width: 26ch; /* Fixed width matching the final text width */
 }
 
-/* ================================
-   TYPEWRITER EFFECT STYLES
-   ================================ */
+/* 
+  ================================
+  TYPEWRITER EFFECT STYLES (UPDATED)
+  ================================
+*/
 #typewriter {
     display: inline-block;
     margin-right: 30px;
     margin-left: 5px;
     overflow: hidden;
     white-space: nowrap;
-    width: 0;
-    border-right: 3px solid white;
-    animation: typing 2s steps(26, end) forwards,
+    width: 0;                /* Start with no visible text */
+    border-right: 3px solid white; /* Cursor look */
+    animation: typing 4s steps(26, end) forwards, 
                blink 1s steps(1, end) 4;
 }
 
+/* Typewriter animation */
 @keyframes typing {
     0% {
       width: 0;
       border-right: 3px solid white;
     }
     100% {
-      width: 26ch;
-      border-right: none;
+      width: 26ch;       /* Final width matching the h1 container */
+      border-right: none;/* Remove the cursor after typing ends */
     }
 }
 
+/* Blinking animation */
 @keyframes blink {
     50% {
       border-color: transparent;
@@ -103,8 +107,10 @@ body {
 }
 
 /* =============================================
-   Center the .acon exactly in the nav
-   ============================================= */
+   ADDED BELOW TO CENTER THE .acon EXACTLY IN THE NAV
+   (No previous code changed)
+   =============================================
+*/
 .top {
     position: relative;
 }
@@ -116,11 +122,13 @@ body {
 }
 
 /* =============================================
-   Pin the cart icon at the right end
-   ============================================= */
+   ADDED BELOW TO PIN THE CART ICON AT THE RIGHT END
+   (No previous code changed)
+   =============================================
+*/
 .acon {
-    width: 100%;
-    justify-content: center;
+    width: 100%; /* let .acon fill the nav bar width */
+    justify-content: center; /* center ABOUT/CONTACT/PRODUCTS in the middle */
 }
 
 #cart {
@@ -128,53 +136,30 @@ body {
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    margin-right: 0 !important;
+    margin-right: 0 !important; /* override any earlier margin */
 }
 
-/* NEW: Account icon near cart, to the left */
-#account {
-    position: absolute;
-    right: 60px;               /* 40px to the left of the cart */
-    top: 50%;
-    transform: translateY(-50%);
-    margin-right: 0 !important;
-    font-size: x-large;
-    color: white;
-    text-decoration: none;
-    display: flex;
-    padding: 5px;
-    border-radius: 15px;
-    font-family: "Teko", sans-serif;
-}
-#account:hover {
-    background-color: #ffe6f2;
-    color: #ff3385;
-}
-
-.tag h1 {
+.tag h1{
   font-family: "Playfair Display";
 }
 
-.hero {
+.hero{
   display: flex;
   height: 500px;
   background-color: #ffe6f2;
   align-items: center;
 }
-
-.tag {
+.tag{
   display: flex;
   width: 400px;
   margin-left: 40px;
   flex-direction: column;
   row-gap: 20px;
 }
-
-.tag h3 {
+.tag h3{
   font-weight: normal;
 }
-
-.tag button {
+.tag button{
   width: fit-content;
   background-color: #ff3385;
   color: white;
@@ -183,77 +168,71 @@ body {
   border-radius: 18px;
   margin-left: 50px;
 }
-
-#kart {
+#kart{
   color: red;
 }
-
-.dhero {
+.dhero{
   display: flex;
   justify-content: space-around;
+  
 }
-
-.d1 {
+.d1{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 180px;
+  /*border: 2px solid black;*/
   margin-left: 40px;
   margin-top: 20px;
   height: fit-content;
   padding: 20px;
 }
-
-.d1 nav {
+.d1 nav{
   display: flex;
   flex-direction: row;
 }
-
-.d2 {
+.d2{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 180px;
+  /*border: 2px solid black;*/
   margin-left: 40px;
   margin-top: 20px;
   height: fit-content;
   padding: 20px;
 }
-
-.d2 nav {
+.d2 nav{
   display: flex;
   flex-direction: row;
 }
-
-#quality {
+#quality{
   color: red;
 }
-
-.d3 {
+.d3{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 180px;
+  /*border: 2px solid black;*/
   margin-left: 40px;
   margin-top: 20px;
   height: fit-content;
   padding: 20px;
 }
-
-.d3 nav {
+.d3 nav{
   display: flex;
   flex-direction: row;
 }
-
-#sell {
+#sell{
   color: red;
 }
-
-.d4 {
+.d4{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 220px;
+  /*border: 2px solid black;*/
   margin-left: 40px;
   margin-top: 20px;
   margin-right: 20px;
@@ -263,49 +242,46 @@ body {
   padding-top: 20px;
   padding-bottom: 10px;
 }
-
-.d4 nav {
+.d4 nav{
   display: flex;
   flex-direction: row;
 }
-
-#pay {
+#pay{
   color: red;
 }
-
-.d1:hover {
-  background-color: #f7f7f7;
+.d1:hover{
+  background-color: #f7f7f7; /* Light grey background */
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 15px;
 }
-
-.d2:hover {
-  background-color: #f7f7f7;
+.d2:hover{
+  background-color: #f7f7f7; /* Light grey background */
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 15px;
 }
-
-.d3:hover {
-  background-color: #f7f7f7;
+.d3:hover{
+  background-color: #f7f7f7; /* Light grey background */
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 15px;
 }
-
-.d4:hover {
-  background-color: #f7f7f7;
+.d4:hover{
+  background-color: #f7f7f7; /* Light grey background */
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transform: scale(1);
 }
 
-/* Animation for hero text */
+/* =============================================
+   NEW ANIMATION FOR THE HERO TEXT
+   =============================================
+*/
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -316,51 +292,28 @@ body {
     transform: translateY(0);
   }
 }
-
 .tag h1 {
   font-family: "Playfair Display";
-  animation: fadeInUp 0.9s ease forwards;
+  animation: fadeInUp 0.8s ease forwards; /* no delay */
 }
-
 .tag h3 {
   font-weight: normal;
-  animation: fadeInUp 0.9s ease 0.5s forwards;
+  animation: fadeInUp 0.8s ease 0.3s forwards; /* 0.3s delay */
 }
-
 .tag button {
-  animation: fadeInUp 0.9s ease 0.8s forwards;
+  animation: fadeInUp 0.8s ease 0.6s forwards; /* 0.6s delay */
 }
 
-#account {
-  position: absolute;
-  right: 70px;  /* Increased from 60px to 100px for more spacing */
-  top: 50%;
-  transform: translateY(-50%);
-  margin-right: 0 !important;
-  font-size: x-large;
-  color: white;
-  text-decoration: none;
-  display: flex;
-  padding: 5px;
-  border-radius: 15px;
-  font-family: "Teko", sans-serif;
-}
-/* NEW: Search icon styling */
-#search {
-  position: absolute;
-  right: 120px;  /* Adjust this value for spacing */
-  top: 50%;
-  transform: translateY(-50%);
-  margin-right: 0 !important;
-  font-size: x-large;
-  color: white;
-  text-decoration: none;
-  display: flex;
-  padding: 5px;
-  border-radius: 15px;
-  font-family: "Teko", sans-serif;
-}
-#search:hover {
-  background-color: #ffe6f2;
-  color: #ff3385;
+/* =============================================
+   OVERRIDE .dhero TO USE GRID INSTEAD OF FLEX
+   =============================================
+*/
+.dhero {
+  display: grid !important; /* Override the 'display: flex' above */
+  grid-template-columns: repeat(4, auto);
+  justify-content: space-around;
+  align-items: start;
+  /* You can add a gap if you like, e.g.:
+     gap: 20px;
+  */
 }
