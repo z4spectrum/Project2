@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ethereal Weaves</title>
+  <link rel="icon" href="../images/logo.png" type="img/png">
+  <link rel="stylesheet" href="../Css Files/home.css">
+  <link rel="stylesheet" href="../Css Files/testing.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Expletus+Sans:ital,wght@0,400..700;1,400..700&family=Teko:wght@300..700&display=swap"
+    rel="stylesheet"
+  >
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Eczar:wght@400..800&family=Expletus+Sans:ital,wght@0,400..700;1,400..700&family=Teko:wght@300..700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=sell" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=editor_choice" />
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+  <!-- NAVBAR (unchanged) -->
+  <nav class="top">
+    <div class="logo">
+      <img src="../images/logo.png" alt="logo" />
+    </div>
+    <h1 class="hd"><span id="typewriter">Ethereal Weaves</span></h1>
+    <div class="acon">
+      <a href="#">ABOUT</a>
+      <a href="#">CONTACT</a>
+      <a href="#">PRODUCTS</a>
+      <a href="#" id="cart"><i class="fas fa-shopping-cart"></i></a>
+      <a href="#" id="account"><i class="fas fa-user"></i></a>
+      <a href="#" id="search"><i class="fas fa-search"></i></a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION (existing code) -->
+  <div class="hero">
+    <!-- Left side: existing .tag content (unchanged) -->
+    <div class="tag">
+      <h1>Handwoven Elegance, Crafted for You.</h1>
+      <h3>Discount available.Grab it now!</h3>
+      <button>Shop Now</button>
+    </div>
+
+    <!-- =========================
+         NEW COVERFLOW SLIDER
+         ========================= -->
+    <div class="coverflow-container">
+      <div class="coverflow-slider" id="coverflow-slider">
+        <!-- Add as many slides as you like -->
+        <div class="coverflow-slide"
+             style="background-image: url('../images/img1.jpeg');"
+             data-index="0">
+          <div class="coverflow-caption">
+            <h3>Slide 1</h3>
+            <p>Description 1</p>
+          </div>
+        </div>
+        <div class="coverflow-slide"
+             style="background-image: url('../images/img2.jpeg');"
+             data-index="1">
+          <div class="coverflow-caption">
+            <h3>Slide 2</h3>
+            <p>Description 2</p>
+          </div>
+        </div>
+        <div class="coverflow-slide"
+             style="background-image: url('../images/img3.jpeg');"
+             data-index="2">
+          <div class="coverflow-caption">
+            <h3>Slide 3</h3>
+            <p>Description 3</p>
+          </div>
+        </div>
+        <div class="coverflow-slide"
+             style="background-image: url('../images/img4.webp');"
+             data-index="3">
+          <div class="coverflow-caption">
+            <h3>Slide 4</h3>
+            <p>Description 4</p>
+          </div>
+        </div>
+        <div class="coverflow-slide"
+        style="background-image: url('../images/img5.webp');"
+        data-index="4">
+     <div class="coverflow-caption">
+       <h3>Slide 5</h3>
+       <p>Description 5</p>
+     </div>
+   </div>
+    
+      </div>
+    </div>
+  </div>
+  <!-- END HERO SECTION -->
+
+  <!-- EXISTING FEATURE BOXES (unchanged) -->
+  <div class="dhero">
+    <div class="d1">
+      <nav>
+        <i class="fas fa-shopping-cart" id="kart" style="margin-top: 5px;"></i>
+        <h3 style="margin-left: 10px; margin-bottom: 10px;">
+          Free Delivery
+        </h3>
+      </nav>
+      <p>Enjoy swift, complimentary shipping on every single order.</p>
+    </div>
+
+    <div class="d2">
+      <nav>
+        <span class="material-symbols-outlined" id="quality">editor_choice</span>
+        <h3 style="margin-left: 10px; margin-bottom: 10px;">
+          Quality guarantee
+        </h3>
+      </nav>
+      <p>Every item meets our strict quality standards, and guaranteed.</p>
+    </div>
+
+    <div class="d3">
+      <nav>
+        <span class="material-symbols-outlined" id="sell">sell</span>
+        <h3 style="margin-left: 10px; margin-bottom: 10px;">
+          Daily offers
+        </h3>
+      </nav>
+      <p>Discover fresh, exciting new discounts each and every single day.</p>
+    </div>
+
+    <div class="d4">
+      <nav>
+        <span class="material-symbols-outlined" id="pay">encrypted_add</span>
+        <h3 style="margin-left: 10px; margin-bottom: 10px;">
+          100% secure payment
+        </h3>
+      </nav>
+      <p>Shop confidently with secure and highly reliable transactions you can always completely trust.</p>
+    </div>
+  </div>
+
+  <!-- =========================
+       NEW JS FOR COVERFLOW
+       ========================= -->
+       <script>
+        // Grab the slider and its slides
+        const coverflowSlider = document.getElementById('coverflow-slider');
+        const coverflowSlides = Array.from(coverflowSlider.querySelectorAll('.coverflow-slide'));
+      
+        // Center slide index (start with whichever you like)
+        let currentIndex = 2;
+      
+        // Position slides based on currentIndex
+        function updateCoverflow() {
+          coverflowSlides.forEach((slide, i) => {
+            const offset = i - currentIndex;
+            const translateX = offset * 180;
+            const rotateY = offset * -30;
+            const scale = Math.max(1 - Math.abs(offset) * 0.1, 0.7);
+            const opacity = Math.max(1 - Math.abs(offset) * 0.3, 0);
+      
+            slide.style.transform = `
+              translateX(${translateX}px)
+              rotateY(${rotateY}deg)
+              scale(${scale})
+            `;
+            slide.style.zIndex = 100 - Math.abs(offset);
+            slide.style.opacity = opacity;
+          });
+        }
+      
+        // Click on a slide to bring it to the center
+        coverflowSlides.forEach((slide, i) => {
+          slide.addEventListener('click', () => {
+            currentIndex = i;
+            updateCoverflow();
+          });
+        });
+      
+        // Initialize positions on load
+        updateCoverflow();
+      
+        // ==========================
+        // AUTOPLAY FEATURE
+        // ==========================
+        // This will move to the next slide every 3 seconds (3000 ms).
+        setInterval(() => {
+          // Wrap around when reaching the last slide
+          currentIndex = (currentIndex + 1) % coverflowSlides.length;
+          updateCoverflow();
+        }, 3000); // Adjust 3000 for a faster or slower interval
+      </script>
+      
+</body>
+</html>

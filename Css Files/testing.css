@@ -1,0 +1,86 @@
+/* =============================================
+   NEW COVERFLOW SLIDER CSS (added at the bottom)
+   ============================================= */
+
+/* This container will be on the right side of the hero, next to .tag */
+.coverflow-container {
+  /* Expand to fill remaining horizontal space in .hero */
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* If you want to see the boundary for debugging:
+     border: 1px dashed red; */
+}
+
+/* We need perspective on the container so 3D transforms are visible */
+.coverflow-container {
+  perspective: 1000px;
+}
+
+/* The "stage" for the slides */
+.coverflow-slider {
+  position: relative;
+  width: 320px;   /* Adjust to your liking */
+  height: 300px;  /* Adjust to your liking */
+  overflow:visible; /* Ensure the enlarged slide doesn’t push out the container */
+  perspective: 1000px;
+}
+
+/* Each individual slide */
+.coverflow-slide {
+  position: absolute;
+  width: 300px;
+  height: 280px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease, opacity 0.7s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fff;
+  padding: 15px;
+}
+
+/* Optional overlay for text readability */
+.coverflow-slide::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.coverflow-caption {
+  position: relative;
+  z-index: 2; /* Above overlay */
+}
+
+/* Responsive: shrink the slider on smaller screens */
+@media (max-width: 768px) {
+  .coverflow-slider {
+    width: 240px;
+    height: 220px;
+  }
+  .coverflow-slide {
+    width: 220px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .coverflow-slider {
+    width: 180px;
+    height: 160px;
+  }
+  .coverflow-slide {
+    width: 160px;
+    height: 140px;
+  }
+}
